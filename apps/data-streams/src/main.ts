@@ -1,10 +1,11 @@
 import { INestApplication } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { Transport } from '@nestjs/microservices';
 import { AppModule } from './app.module';
 
 const initMicroservice = async (app: INestApplication) => {
   app.connectMicroservice({
-        // Setup communication protocol here
+    // Setup communication protocol here
   });
   await app.startAllMicroservicesAsync();
 };
